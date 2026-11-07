@@ -1,50 +1,25 @@
-/* Input : e  output : TRUE
-   Input : b  output : False   (a,e,i,o,u ) = true
-*/
+#include"Header.h"
+////////////////////////////////////////
+// 
+//function Name :  addition
+//Input         :  integer, integer 
+//output        :  integer
+//Description   :  addition
+//Date          :  09/10/2026
+//Author        :  Akshata Shivaji Tat
+//
+//////////////////////////////////////////
+int  Addition(
+                    int iNo1,      //frist input
+                    int iNo2       //Second input
+             )
 
-#include<stdio.h>
-typedef int Bool;
-
-#define TRUE 1
-#define FALSE 0
-
-
-Bool Checkvowel(char cValue )
 {
-    if(cValue == 'a' || cValue =='e' ||
-       cValue == 'i' || cValue =='o' ||
-       cValue == 'u' || cValue =='A' ||
-       cValue == 'E' || cValue =='I' ||
-       cValue == 'O' || cValue =='U'  )
-    {
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
-    }
-    
+    int iAns = 0;
+
+    iAns = iNo1 + iNo2;          // Business logic
+
+
+    return iAns;
 }
 
-int main()
-{
-    int cValue = 0;
-    Bool bRet = FALSE;
-
-    printf("Enter the character\n");
-    scanf("%c",&cValue);
-
-    bRet = Checkvowel(cValue);
-
-    if(bRet == TRUE)
-    {
-        printf("It is vowel-TRUE");
-    }
-    else
-    {
-        printf("It is not a vowel-FALSE");
-    }
-
-
-    return 0;
-}
